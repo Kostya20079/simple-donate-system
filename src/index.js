@@ -1,2 +1,5 @@
+import App from './modules/app'
 import './style/index.css'
-console.log(1);
+
+const app = new App()
+app.run()
