@@ -8,7 +8,7 @@ export class DonateForm {
   #createNewDonate 
 
   static defaultDonateText = {
-    LabelText: 'Введіть суму в $',
+    LabelText: `Введіть суму в ${Settings.currency}`,
     DonateButtonText: 'Задонатити',
   }
 
