@@ -1,4 +1,4 @@
-import { dateFormat } from "../core/utils/date"
+import * as Utils from "../core/utils/date-sum"
 import { Settings as CurrencySetting } from "../core/constants/settings"
 
 export class DonateList {
@@ -18,7 +18,7 @@ export class DonateList {
     this.#donates.forEach(donateItem => {
       const donateItemHTML = document.createElement('div')
       donateItemHTML.className = 'donate-item'
-      const donateDateFormat = dateFormat(donateItem.date)
+      const donateDateFormat = Utils.dateFormat(donateItem.date)
       donateItemHTML.innerHTML = `${donateDateFormat} - <b>${donateItem.amount}${CurrencySetting.currency}</b>`
       
       container.append(donateItemHTML)
