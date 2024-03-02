@@ -18,7 +18,7 @@ export default class App {
       totalAmount: 0,
     }
     this.#donateForm = new DonateForm(this.#state.totalAmount, this.createNewDonate.bind(this))
-    this.#donateList = new DonateList(mockDonates, this.#state.donates)
+    this.#donateList = new DonateList(this.#state.donates)
   }
 
   createNewDonate(newDonate) {
