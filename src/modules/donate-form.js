@@ -13,7 +13,7 @@ export class DonateForm {
 
   static defaultDonateValues = {
     min: 1,
-    max: 100,
+    max: 1000,
   }
 
   constructor(totalAmountValue, createNewDonate, minValue, maxValue) {

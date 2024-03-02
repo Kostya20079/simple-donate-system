@@ -23,7 +23,7 @@ export default class App {
 
   createNewDonate(newDonate) {
     console.log(newDonate);
-    this.#state.donates.push(newDonate)
+    this.#state.donates.unshift(newDonate)
     this.#state.totalAmount += newDonate.amount
     this.#donateList.updateDonates(this.#state.donates)
     this.#donateForm.updateTotalAmount(this.#state.totalAmount)
