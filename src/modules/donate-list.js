@@ -18,13 +18,15 @@ export class DonateList {
       const donateItemHTML = document.createElement('div')
       donateItemHTML.className = 'donate-item'
       const donateDateFormat = dateFormat(donateItem.date)
-      donateItemHTML.innerHTML = `${donateDateFormat} - <b>${donateItem.amount}</b>`
-      
-      console.log(donateDateFormat);
-      console.log(donateItem.amount);
+      donateItemHTML.innerHTML = `${donateDateFormat} - <b>${donateItem.amount}$</b>`
       
       container.append(donateItemHTML)
     });
+  }
+
+  updateDonates(updatedDonates) {
+    this.#donates = updatedDonates
+    this.#renderDonatesList(this.#donatesItemHTML)
   }
 
   render() {
