@@ -1,3 +1,4 @@
+import { Settings } from "../core/constants/settings"
 export class DonateForm {
   #minDonate
   #maxDonate
@@ -52,7 +53,7 @@ export class DonateForm {
 
   
   updateTotalAmount(newAmount) {
-    this.#totalAmount.innerText = `${newAmount}$`
+    this.#totalAmount.innerText = `${newAmount}${Settings.currency}`
   }
 
   #onDonateFormSubmit(event) {

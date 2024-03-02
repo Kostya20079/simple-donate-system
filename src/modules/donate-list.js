@@ -1,4 +1,5 @@
 import { dateFormat } from "../core/utils/date"
+import { Settings as CurrencySetting } from "../core/constants/settings"
 
 export class DonateList {
   #donates
@@ -18,7 +19,7 @@ export class DonateList {
       const donateItemHTML = document.createElement('div')
       donateItemHTML.className = 'donate-item'
       const donateDateFormat = dateFormat(donateItem.date)
-      donateItemHTML.innerHTML = `${donateDateFormat} - <b>${donateItem.amount}$</b>`
+      donateItemHTML.innerHTML = `${donateDateFormat} - <b>${donateItem.amount}${CurrencySetting.currency}</b>`
       
       container.append(donateItemHTML)
     });
